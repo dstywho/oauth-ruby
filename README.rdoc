@@ -10,7 +10,7 @@ See the OAuth specs http://oauth.net/core/1.0/
 
 == The basics
 
-  consumer = ::OAuth::Consumer.new("4aba8760-8054-4640-9322-84e7fc2bd227", "00361998-1ca4-4026-b5bc-3131d0539ce5", 
+  consumer = ::OAuth::Consumer.new("--------------------------------------", "------------------------------------", 
     {
       :site => "https://external.ningapis.com/",
       :request_token_path => "/xn/rest/${your_ning_sub_domain}/1.0/Token",
