@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{oauth}
-  s.version = "0.4.5"
+  s.version = "0.4.5.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Pelle Braendgaard", "Blaine Cook", "Larry Halff", "Jesse Clark", "Jon Crosby", "Seth Fitzsimmons", "Matt Sanford", "Aaron Quint"]
