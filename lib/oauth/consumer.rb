@@ -158,6 +158,7 @@ module OAuth
       # override the request with your own, this is useful for file uploads which Net::HTTP does not do
       req = create_signed_request(http_method, path, token, request_options, *arguments)
       return nil if block_given? and yield(req) == :done
+      req = basic_auth(req)
       rsp = http.request(req)
       # check for an error reported by the Problem Reporting extension
       # (http://wiki.oauth.net/ProblemReporting)
@@ -376,6 +377,13 @@ module OAuth
 
     def marshal_load(data)
       initialize(data[:key], data[:secret], data[:options])
+    end
+
+private
+
+    def basic_auth(req)
+      req.basic_auth(@options[:basic_auth_username],@options[:basic_auth_password]) if @options[:basic_auth_username]
+      req
     end
 
   end
